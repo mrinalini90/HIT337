@@ -5,6 +5,7 @@
  */
 package User;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -12,6 +13,7 @@ import java.util.List;
  * @author Meeru
  */
 public interface Users {
+    public boolean getConnection() throws SQLException;
     public List<User> getAllUsers() throws Exception;
     public int addUser(int id,String userName, String Password) throws Exception;
 }
