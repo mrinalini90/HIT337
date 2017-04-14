@@ -7,10 +7,6 @@ package Catalogue;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Meeru
  */
-public class Test extends HttpServlet {
+public class UpdateAndDeleteItem extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,10 +35,10 @@ public class Test extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Test</title>");            
+            out.println("<title>Servlet SaveAndUpdateItem</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Test at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet SaveAndUpdateItem at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -60,23 +56,7 @@ public class Test extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        try {
-           
-            String user=request.getParameter("user");
-            RequestDispatcher rd = request.getRequestDispatcher("List.html");
-                rd.include(request, response);
-        } finally {            
-            out.close();
-        }
-//        DatabaseConnection connection = new DatabaseConnection();
-//        System.out.println("Connectiong ...");
-//        boolean conn = connection.getConnection();
-//        if(conn == true){
-//            System.out.println("connection sucessful");
-//        }
-           
+        processRequest(request, response);
     }
 
     /**
@@ -90,7 +70,7 @@ public class Test extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doGet(request, response); 
+        processRequest(request, response);
     }
 
     /**

@@ -40,6 +40,9 @@ public class AddItems extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        String value = request.getParameter("userid");
+        System.out.println("id "+ value);
          RequestDispatcher rd = request.getRequestDispatcher("AddItem.html");
                 rd.include(request, response);
     }
@@ -48,6 +51,7 @@ public class AddItems extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doGet(request,response);
+        
     }
 
     @Override

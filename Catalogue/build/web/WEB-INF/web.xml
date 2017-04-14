@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>Test</servlet-name>
-        <servlet-class>Catalogue.Test</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>AddItems</servlet-name>
         <servlet-class>Catalogue.AddItems</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>Test</servlet-name>
-        <url-pattern>/Test</url-pattern>
-    </servlet-mapping>
+    <servlet>
+        <servlet-name>SaveAndUpdateItem</servlet-name>
+        <servlet-class>Catalogue.UpdateAndDeleteItem</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Home</servlet-name>
+        <servlet-class>Catalogue.Home</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddItems</servlet-name>
         <url-pattern>/AddItems</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SaveAndUpdateItem</servlet-name>
+        <url-pattern>/SaveAndUpdateItem</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/Home</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

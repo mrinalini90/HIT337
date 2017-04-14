@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Add Item</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
@@ -18,20 +18,20 @@ and open the template in the editor.
         <div class="container">
             <h2>Add Product</h2>
             <form>
-              <div class="form-group">
-                <label for="AddItem">Product Name:</label>
-                <input type="text" class="form-control" id="name">
+              <div class="form-group" action ="AddItems" method="GET" enctype="text/plain">
+                <label for="AddItem">Product ID:</label>
+                <input type="text" class="form-control"  name="userid">
               </div>
               <div class="form-group">
-                <label for="AddItem">Product Number:</label>
-                <input type="text" class="form-control" id="number">
+                <label for="AddItem">Product Name:</label>
+                <input type="text" class="form-control"  name ="name">
               </div>
               <div class="form-group">
                 <label for="AddItem">Product Description:</label>
                 <input type="text" class="form-control" name="desc">
               </div>
                 <div class="form-group">
-                 <a href="" class="btn btn-primary " role="button" > Add </a>
+                 <a href="AddItems" class="btn btn-primary " role="button"  type ="submit" > Add </a>
               </div>
               
             </form>
