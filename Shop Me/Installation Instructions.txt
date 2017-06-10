@@ -1,0 +1,20 @@
+setup and Installation of Shop Me software
+
+Requirements
+1. Apache Tomcat installed with netbeans EE IDE
+2. Apache Derby database installed. 
+3. Able to open and run the project in netbeans.
+
+SetUp
+1. Add derbyclient.jar file to the library section. (This will be found at C:\db-derby-10.13.1.1-bin\bin)
+2. Add JSTL jar file present in the folder to the library. its a requirement to have jstl-imp.jar and jstl-api.jar
+3. Application folder consists of a CreateDB.sql file with helps you create and set up the database "shopmedb" and its tables
+4. After setting up the database in Netbeans, get the Database URL from the "shopmedb"database properties
+5. Update the connection url links in the DataAccess files  
+	a.Shop\src\java\Order\OrderDataAccess  
+	b.Shop\src\java\Product\ItemDataAccess 
+	c.Shop\src\java\customer\UserDataAccess
+6. Make sure your database is connected and running with your user name and password, in netbeans 
+7. Run the project on any browser.
+
+Tha application is responsive
