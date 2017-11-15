@@ -14,3 +14,4 @@ Installation.
 Netbeans is perfect as it has an inbuilt apache tomcat server and easy to install derby too.
 
 
+Catalogue project is a part of test.
