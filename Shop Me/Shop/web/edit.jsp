@@ -6,44 +6,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Update</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
-
-        <!-- local scripts -->
-        <!--  <link rel="stylesheet" href="library/bootstrap/css/bootstrap.min.css">  
-        <script src="library/bootstrap/js/jquery-3.2.1.min.js"></script>  
-        <script src="library/bootstrap/js/bootstrap.min.js"></script> -->
+        <title>Update</title>        
     </head>
     <body>
-        <!-- Nav Bar  -->
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                    </button>
-                    <a class="navbar-brand" href="Home">ShopMe</a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar"> 
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="Home">Home</a></li>
-                        <li><a href="myProducts">My Products</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="userProfile.jsp"><span class="glyphicon glyphicon-user"></span>User Profile</a></li>
-                        <li><a href="Logout"><span class="glyphicon glyphicon-log-out"></span>Sign out</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
+           <!--navBar inserted -->
+        <jsp:include page="navBar.jsp" />   
         <div class="Container">
             <form class="form-horizontal" action="EditItem" method="GET" enctype="text/plain">
 

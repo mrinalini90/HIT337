@@ -55,8 +55,7 @@ public class Item implements Serializable {
     private float itemprice;
     @Column(name = "ITEMSTATUS")
     private Boolean itemstatus;
-    @JoinColumn(name = "SELLERID", referencedColumnName = "ID")
-    @ManyToOne
+    @Column(name = "SELLERID")
     private int sellerid;
 
     public Item() {

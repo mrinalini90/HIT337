@@ -6,42 +6,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Finalised</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-        <!-- local scripts -->
-        <!--  <link rel="stylesheet" href="library/bootstrap/css/bootstrap.min.css">  
-        <script src="library/bootstrap/js/jquery-3.2.1.min.js"></script>  
-        <script src="library/bootstrap/js/bootstrap.min.js"></script> -->
+        <title> Finalised</title>    
     </head>
     <body>
-        <!-- Nav Bar  -->
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                    </button>
-                    <a class="navbar-brand" href="Home">ShopMe</a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar"> 
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="Home">Home</a></li>
-                        <li><a href="myProducts">My Products</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="userProfile.jsp"><span class="glyphicon glyphicon-user"></span>User Profile</a></li>
-                        <li><a href="Logout"><span class="glyphicon glyphicon-log-out"></span>Sign out</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            <!-- Nav Bar  -->
+           <jsp:include page="navBar.jsp" />     
 
         <div class="container">
             <div class="jumbotron">
@@ -50,6 +19,53 @@
             </div>
             <p>To Continue Shopping. Please click the button below</p>      
             <a href="Home" class="btn btn-info btn-lg" role="button">Continue Shopping</a> 
+            
+               <!-- Cart Modal -->
+            <div class="modal fade" id="cart" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <form class="form-horizontal" action="CheckOut" method="GET" enctype="text/plain">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">New Item</h4>
+                            </div>
+                            <div class="modal-body">      
+
+
+                                <div class="container">
+                                    <table class="table-responsive table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th class="col-md-1">Product Name</th>
+                                                <th class="col-md-1">Product Quantity</th>
+                                                <th class="col-md-1">Product Price</th>
+                                                <th class="col-md-2"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <c:forEach items="${cart}" var="item">
+                                                <tr>
+                                                    <td class="col-md-1"><c:out value="${item.itemname}" /></td>
+                                                    <td class="col-md-1"><c:out value="${item.itemquanity}" /></td>
+                                                    <td class="col-md-1"><c:out value="${item.itemprice}" /></td>
+                                                    <td class="col-md-2">   
+                                                        <button type="submit" value ="${item.itemid}" name="deleteCart" class="btn btn-warning btn-sm" >Remove</button> 
+                                                    </td>
+                                                </tr>
+                                            </c:forEach>              
+                                        </tbody>
+                                    </table>
+                                </div>                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-default" value="checkout" name="checkout">Check Out</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>                   
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </body>

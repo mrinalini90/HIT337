@@ -14,8 +14,6 @@ import java.util.ArrayList;
  */
 public interface ItemInterface {
 
-    public boolean getConnection();
-
     public void addItem(String itemname, String itemdescription, Integer itemquanity, float itemprice, int sellerid);
 
     public ArrayList<Item> getAllProducts(Customer seller);

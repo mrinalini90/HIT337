@@ -33,31 +33,6 @@ public class UserDataAccess implements UserInterface {
      *
      * @return
      */
-    @Override
-    public boolean getConnection() {
-        boolean connected = false;
-        try {
-            try {
-                Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
-            } catch (InstantiationException ex) {
-                Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IllegalAccessException ex) {
-                Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-            Connection conn = DriverManager.getConnection(connectionURL);
-            connected = true;
-            conn.close();
-        } catch (SQLException ex) {
-            System.out.println(ex);
-            connected = false;
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
-            connected = false;
-        }
-        return connected;
-    }
-
     /**
      *
      * @param name
@@ -67,7 +42,7 @@ public class UserDataAccess implements UserInterface {
      * @throws SQLException
      */
     @Override
-    public void addUser(String name, String email, String password)  {
+    public void addUser(String name, String email, String password) {
         try {
             try {
                 Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
@@ -131,7 +106,7 @@ public class UserDataAccess implements UserInterface {
     }
 
     @Override
-    public ArrayList<String> getUserEmails(){
+    public ArrayList<String> getUserEmails() {
 
         ArrayList<String> emails = new ArrayList<>();
         String name, email, password;
@@ -199,7 +174,7 @@ public class UserDataAccess implements UserInterface {
     }
 
     @Override
-    public Customer getUserByEmail(String email)  {
+    public Customer getUserByEmail(String email) {
         String emailPresent = null;
         Customer user = new Customer();
         try {
@@ -271,7 +246,7 @@ public class UserDataAccess implements UserInterface {
 
     @Override
     public void updateUser(String name, String password, int id) {
-         try {
+        try {
             try {
                 Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
             } catch (InstantiationException ex) {

@@ -31,29 +31,6 @@ public class ItemDataAccess implements ItemInterface {
      *
      * @return
      */
-    public boolean getConnection() {
-        boolean connected = false;
-        try {
-            try {
-                Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
-            } catch (InstantiationException ex) {
-                Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IllegalAccessException ex) {
-                Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-            Connection conn = DriverManager.getConnection(connectionURL);
-            connected = true;
-            conn.close();
-        } catch (SQLException ex) {
-            System.out.println(ex);
-            connected = false;
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
-            connected = false;
-        }
-        return connected;
-    }
 
     @Override
     public void addItem(String itemname, String itemdescription, Integer itemquanity, float itemprice, int sellerid) {

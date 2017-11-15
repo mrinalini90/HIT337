@@ -13,6 +13,8 @@ import java.util.ArrayList;
  * @author Meeru
  */
 public interface OrderInterface {
-    public void addItemsToOrder(ArrayList<Finalorder> addlist,Customer user);
-      public void addItemToOrder(int itemid,String itemname,int quantity,float itemprice,int buyerid);
+
+    public void addItemsToOrder(ArrayList<Finalorder> addlist, Customer user);
+
+    public void addItemToOrder(int itemid, String itemname, int quantity, float itemprice, int buyerid);
 }

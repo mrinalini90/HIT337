@@ -6,39 +6,13 @@ Registeration page
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Register</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-        <!-- local scripts -->
-        <!--  <link rel="stylesheet" href="library/bootstrap/css/bootstrap.min.css">  
-        <script src="library/bootstrap/js/jquery-3.2.1.min.js"></script>  
-        <script src="library/bootstrap/js/bootstrap.min.js"></script> -->
+        <title>Register</title>        
     </head>
     <body>
 
     <body>
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                    </button>
-                    <a class="navbar-brand" href="#">ShopMe</a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">            
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <!-- Nav Bar  -->
+        <jsp:include page="generalNav.jsp" /> 
         <div class = "Container">  <br>
             <div class="jumbotron">
                 <h1>Welcome to Shop Me</h1>      

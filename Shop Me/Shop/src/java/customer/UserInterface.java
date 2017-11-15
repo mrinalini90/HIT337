@@ -13,8 +13,6 @@ import java.util.ArrayList;
  */
 public interface UserInterface {
 
-    public boolean getConnection();
-
     public void addUser(String name, String email, String password);
 
     public ArrayList<Customer> getAllUser();
@@ -26,6 +24,6 @@ public interface UserInterface {
     public Customer getUserByEmail(String email);
 
     public Customer getUserById(int id);
-    
-    public void updateUser(String name, String password,int id);
+
+    public void updateUser(String name, String password, int id);
 }

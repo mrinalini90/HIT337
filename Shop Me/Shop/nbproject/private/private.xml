@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>web/navBar.jsp</url>
+            <bookmark id="1">
+                <name/>
+                <line>19</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Meeru/Documents/HIT337/Shop%20Me/Shop/web/login.jsp</file>
+            <file>file:/C:/Users/Meeru/Documents/HIT337/Shop%20Me/Shop/web/navBar.jsp</file>
+            <file>file:/C:/Users/Meeru/Documents/HIT337/Shop%20Me/Shop/web/home.jsp</file>
+            <file>file:/C:/Users/Meeru/Documents/HIT337/Shop%20Me/Shop/web/generalNav.jsp</file>
+            <file>file:/C:/Users/Meeru/Documents/HIT337/Shop%20Me/Shop/web/logout.jsp</file>
+        </group>
     </open-files>
 </project-private>
